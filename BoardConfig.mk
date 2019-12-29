@@ -94,5 +94,6 @@ BOARD_BUILD_DISABLED_VBMETA_IMAGE := true
 # VNDK
 BOARD_VNDK_VERSION := current
 TARGET_USES_ION := true
+TARGET_COPY_OUT_VENDOR := vendor
 
 -include vendor/xiaomi/pine/BoardConfigVendor.mk
