@@ -29,7 +29,7 @@ ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)
     ifeq ($(WITH_DEXPREOPT),)
       WITH_DEXPREOPT := true
-      WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
+      WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := false
     endif
   endif
 endif
@@ -88,7 +88,7 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/twrp.fstab
 TARGET_USERIMAGES_USE_EXT4 := true
 
 # Verity
-BOARD_AVB_ENABLE := false
+BOARD_AVB_ENABLE := true
 BOARD_BUILD_DISABLED_VBMETA_IMAGE := true
 
 # VNDK
